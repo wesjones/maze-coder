@@ -187,34 +187,20 @@
     environment.mode = "dev";
     //! src/app.js
     define("app", [ "Board" ], function(Board) {
-        setTimeout(function() {
-            var board = new Board(30, 11);
-            board.generate().then(function() {
+        var board;
+        function start() {
+            board = new Board(30, 11);
+            return board.generate().then(function() {
                 board.start();
-                function pointToDelta(source, target) {
-                    return {
-                        x: target.x - source.x,
-                        y: target.y - source.y
-                    };
-                }
-                board.findPath().then(function(path) {
-                    var index = 0;
-                    var pos = board.getPos();
-                    console.log("path found", path);
-                    function next() {
-                        console.log("next");
-                        if (index < path.length) {
-                            board.move(pointToDelta(pos, path[index])).then(next);
-                            pos = path[index];
-                            index += 1;
-                        } else {
-                            setTimeout(board.stop, 20);
-                        }
-                    }
-                    next();
-                });
             });
-        });
+        }
+        function move(x, y) {
+            if (board) {
+                board.move(x, y);
+            }
+        }
+        exports.start = start;
+        exports.move = move;
     });
     //! src/Board.js
     define("Board", [ "Tile", "Pyramid", "Cube" ], function(Tile, Pyramid, Cube) {
