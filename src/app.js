@@ -53,6 +53,7 @@ define('app', ['Board'], function(Board) {
             //     }
             //     next();
             // });
+            return board;
         });
     }
 

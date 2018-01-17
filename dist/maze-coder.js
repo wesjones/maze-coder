@@ -192,6 +192,7 @@
             board = new Board(30, 11);
             return board.generate().then(function() {
                 board.start();
+                return board;
             });
         }
         function move(x, y) {
