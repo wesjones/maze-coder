@@ -1,7 +1,7 @@
 {
   "name": "maze-coder",
   "url" : "https://github.com/wesjones/maze-coder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate games to be solved with child coding",
   "main": "dist",
   "scripts": {

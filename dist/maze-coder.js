@@ -1,5 +1,5 @@
 (function(exports, global) {
-    global["codeGame"] = exports;
+    global["mazeCoder"] = exports;
     //! src/require-lite.js
     var define, require;
     (function() {
@@ -416,6 +416,6 @@
         Cube.prototype = Piece.prototype;
         return Cube;
     });
-})(this["codeGame"] || {}, function() {
+})(this["mazeCoder"] || {}, function() {
     return this;
 }());

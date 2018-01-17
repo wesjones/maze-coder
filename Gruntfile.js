@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     },
     compile: {
         dev: {
-            wrap: "codeGame", // this is your global namespace
+            wrap: "mazeCoder", // this is your global namespace
             filename: "maze-coder",
             build: dir,
             scripts: {
