@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     compile: {
         dev: {
             wrap: "codeGame", // this is your global namespace
-            filename: "code-game",
+            filename: "maze-coder",
             build: dir,
             scripts: {
                 embedRequire: false,
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
                 strictImports: true
             },
             files: {
-                [dir + "/code-game.css"]: "src/styles/styles.less"
+                [dir + "/maze-coder.css"]: "src/styles/styles.less"
             }
         }
     }

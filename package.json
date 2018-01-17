@@ -1,12 +1,14 @@
 {
-  "name": "code-game",
-  "version": "1.0.0",
+  "name": "maze-coder",
+  "url" : "https://github.com/wesjones/maze-coder",
+  "version": "1.0.3",
   "description": "Generate games to be solved with child coding",
-  "main": "index.html",
+  "main": "dist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wes Jones",
+  "email": "cybus10@gmail.com",
   "license": "ISC",
   "scripts": {
     "dev": "lite-server"
